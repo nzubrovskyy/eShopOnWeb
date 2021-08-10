@@ -1,6 +1,8 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Interfaces;
+﻿using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
+using Microsoft.eShopWeb.ApplicationCore.Interfaces;
 using Microsoft.eShopWeb.ApplicationCore.Services;
 using Microsoft.eShopWeb.Infrastructure.Data;
+using Microsoft.eShopWeb.Infrastructure.Data.Config;
 using Microsoft.eShopWeb.Infrastructure.Logging;
 using Microsoft.eShopWeb.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
@@ -12,6 +14,9 @@ namespace Microsoft.eShopWeb.Web.Configuration
     {
         public static IServiceCollection AddCoreServices(this IServiceCollection services, IConfiguration configuration)
         {
+            var serviceClientSettingsConfig = configuration.GetSection("AzureServiceBus");
+            services.Configure<AzureServiceBusConfiguration>(serviceClientSettingsConfig);
+            services.AddScoped(typeof(IEventBus<>), typeof(EventBusAzureServiceBus<>));
             services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
             services.AddScoped<IBasketService, BasketService>();
             services.AddScoped<IOrderService, OrderService>();

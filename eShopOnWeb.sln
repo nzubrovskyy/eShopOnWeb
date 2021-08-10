@@ -37,6 +37,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAdmin", "src\BlazorAd
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShared", "src\BlazorShared\BlazorShared.csproj", "{715CF7AF-A1EE-40A6-94A0-8DA3F3B2CAE9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderItemsReserver", "OrderItemsReserver\OrderItemsReserver.csproj", "{C20C1A66-AA7E-497A-859A-66C11BC32E1C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeliveryOrderProcessor", "src\DeliveryOrderProcessor\DeliveryOrderProcessor.csproj", "{567BA720-DAA2-45AF-9662-B7A545DF9739}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +87,14 @@ Global
 		{715CF7AF-A1EE-40A6-94A0-8DA3F3B2CAE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{715CF7AF-A1EE-40A6-94A0-8DA3F3B2CAE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{715CF7AF-A1EE-40A6-94A0-8DA3F3B2CAE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C20C1A66-AA7E-497A-859A-66C11BC32E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C20C1A66-AA7E-497A-859A-66C11BC32E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C20C1A66-AA7E-497A-859A-66C11BC32E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C20C1A66-AA7E-497A-859A-66C11BC32E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{567BA720-DAA2-45AF-9662-B7A545DF9739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{567BA720-DAA2-45AF-9662-B7A545DF9739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{567BA720-DAA2-45AF-9662-B7A545DF9739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{567BA720-DAA2-45AF-9662-B7A545DF9739}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +109,8 @@ Global
 		{B5E4F33C-4667-4A55-AF6A-740F84C4CF3A} = {419A6ACE-0419-4315-A6FB-B0E63D39432E}
 		{71368733-80A4-4869-B215-3A7001878577} = {419A6ACE-0419-4315-A6FB-B0E63D39432E}
 		{715CF7AF-A1EE-40A6-94A0-8DA3F3B2CAE9} = {419A6ACE-0419-4315-A6FB-B0E63D39432E}
+		{C20C1A66-AA7E-497A-859A-66C11BC32E1C} = {419A6ACE-0419-4315-A6FB-B0E63D39432E}
+		{567BA720-DAA2-45AF-9662-B7A545DF9739} = {419A6ACE-0419-4315-A6FB-B0E63D39432E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {49813262-5DA3-4D61-ABD3-493C74CE8C2B}

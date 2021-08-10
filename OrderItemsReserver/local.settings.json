@@ -1,0 +1,11 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=steshoponwebfunctions;AccountKey=2yfbgFwTSpmxjR+qJOMDbWOdXCvNGj4w0K/CtCVHCRy+5B2Jtqc8tDbUJDw8PKvvMxrCpg6kMd/3syeI4WOJtQ==;EndpointSuffix=core.windows.net",
+    "AzureWebJobsDashboard": "DefaultEndpointsProtocol=https;AccountName=steshoponwebfunctions;AccountKey=2yfbgFwTSpmxjR+qJOMDbWOdXCvNGj4w0K/CtCVHCRy+5B2Jtqc8tDbUJDw8PKvvMxrCpg6kMd/3syeI4WOJtQ==;EndpointSuffix=core.windows.net",
+    "steshoponweb": "DefaultEndpointsProtocol=https;AccountName=steshoponweb;AccountKey=e+W3kvCxt3pBRa/JJm3QMDbMJwYpqbS+ahqu5Hz24HRSv3TxrP/Mdt6PGvJ7WUZtnDkiYAbmMTWb6uR4o1dT3A==;EndpointSuffix=core.windows.net",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "orderQueue": "sbq-order",
+    "sb-eshoponweb_RootManageSharedAccessKey_SERVICEBUS": "Endpoint=sb://sb-eshoponweb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=9tyzZrBATktww63sE3iRIeMi9S8tR+mOYgYYLA2yplU="
+  }
+}

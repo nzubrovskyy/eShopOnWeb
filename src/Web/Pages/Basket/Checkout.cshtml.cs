@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
+using OrderAggregate = Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
 using Microsoft.eShopWeb.ApplicationCore.Exceptions;
 using Microsoft.eShopWeb.ApplicationCore.Interfaces;
 using Microsoft.eShopWeb.Infrastructure.Identity;
@@ -25,17 +25,20 @@ namespace Microsoft.eShopWeb.Web.Pages.Basket
         private string _username = null;
         private readonly IBasketViewModelService _basketViewModelService;
         private readonly IAppLogger<CheckoutModel> _logger;
+        private readonly IEventBus<OrderAggregate.Order> _eventBus;
 
         public CheckoutModel(IBasketService basketService,
             IBasketViewModelService basketViewModelService,
             SignInManager<ApplicationUser> signInManager,
             IOrderService orderService,
+            IEventBus<OrderAggregate.Order> eventBus,
             IAppLogger<CheckoutModel> logger)
         {
             _basketService = basketService;
             _signInManager = signInManager;
             _orderService = orderService;
             _basketViewModelService = basketViewModelService;
+            _eventBus = eventBus;
             _logger = logger;
         }
 
@@ -59,7 +62,7 @@ namespace Microsoft.eShopWeb.Web.Pages.Basket
 
                 var updateModel = items.ToDictionary(b => b.Id.ToString(), b => b.Quantity);
                 await _basketService.SetQuantities(BasketModel.Id, updateModel);
-                await _orderService.CreateOrderAsync(BasketModel.Id, new Address("123 Main St.", "Kent", "OH", "United States", "44240"));
+                await _orderService.CreateOrderAsync(BasketModel.Id, new OrderAggregate.Address("123 Main St.", "Kent", "OH", "United States", "44240"));
                 await _basketService.DeleteBasketAsync(BasketModel.Id);               
             }
             catch (EmptyBasketOnCheckoutException emptyBasketOnCheckoutException)

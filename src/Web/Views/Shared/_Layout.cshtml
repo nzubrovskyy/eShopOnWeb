@@ -32,6 +32,7 @@
                         <a asp-area="" asp-page="/Index">
                             <img src="~/images/brand.png" alt="eShop On Web" />
                         </a>
+                        @(Environment.GetEnvironmentVariable("REGION_NAME") ?? "Local")
                     </section>
                     <partial name="_LoginPartial" />
                 </article>
